@@ -1,0 +1,6 @@
+project(mcudpbench)
+cmake_minimum_required(VERSION 2.8)
+set(CMAKE_CXX_FLAGS "-ggdb3 -std=c++11")
+find_package(Threads)
+add_executable(mcudpbench main.cc)
+target_link_libraries(mcudpbench ${CMAKE_THREAD_LIBS_INIT})
